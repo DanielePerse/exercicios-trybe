@@ -1,7 +1,7 @@
 ## Agora a prática
 
 Leia atentamente os enunciados e faça o que se pede! Você irá utilizar esse array nos exercícios:
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+*let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];*
 
 1. Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log();
 
@@ -28,7 +28,7 @@ for (let i = 1; i < array.length; i++) {
       let position = array[i];
   
       array[i] = array[j];
-      array[j] = position;
+      *array[j] = position;
     }
   }
 }
