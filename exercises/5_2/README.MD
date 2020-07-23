@@ -4,7 +4,7 @@
 4. [x] Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
 5. [x] Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 6. [x] Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
-6. [x] Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+7. [x] Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
 8. [x] Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 9. [x] Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
 

@@ -115,6 +115,21 @@
             description.className = 'description';
         }
 
+        //3.
+        let removeDiv = document.getElementsByClassName('left-content')[0];
+        divMainContent.removeChild(removeDiv);
+
+        //4.
+        const centralizarDiv = document.getElementsByClassName('right-content')[0];
+        centralizarDiv.style.marginRight = 'auto';
+
+        //5.
+        let changeColorCenterContent = document.getElementsByClassName('main-content')[0];
+        changeColorCenterContent.parentNode.style.backgroundColor = 'rgb(34, 139, 34)';
+
+        //6.
+
+
 
     </script>
 </body>
