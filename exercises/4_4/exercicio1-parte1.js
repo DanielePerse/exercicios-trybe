@@ -5,3 +5,4 @@ let info = {
 };
 
 console.log("Bem-vida, " + info.personagem)
+//console.log("Bem-vinda! " + info["personagem"])

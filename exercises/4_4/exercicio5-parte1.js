@@ -14,7 +14,7 @@ let info2 = {
 
 for (let i in info) {
     for (let j in info2) {
-        console.log(info[i] + " e " + info2[j]);
+        console.log(`${info[i]} ${'e'} ${info2[j]}`);
         break;
     }
 }

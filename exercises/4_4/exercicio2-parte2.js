@@ -2,16 +2,16 @@
 
 let arrayInteiros = [2, 33, 6, 7, 10, 1];
 
-function indiceMaior(arrayInteiros) {
+function array(inteiros) {
+    let maior = 0;
     let resultado = 0;
-    let comparacao = 0
-    for (let index = 0; index < arrayInteiros.length; index += 1) {
-        if (arrayInteiros[index] > comparacao) {
-            comparacao = arrayInteiros[index];
+    for (let index in inteiros) {
+        if (inteiros[index] > maior) {
+            maior = inteiros[index];
             resultado = index;
         }
     }
     return resultado;
 }
 
-console.log(indiceMaior(arrayInteiros));
+console.log(array(arrayInteiros));
