@@ -59,43 +59,43 @@
 
 <body>
     <script>
-        //1.
-        let addTag = document.createElement('h1');
-        addTag.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-        document.body.appendChild(addTag);
+        //1
+        let tagH1 = document.createElement('h1');
+        tagH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(tagH1);
 
-        //2.
-        let divMainContent = document.createElement('div');
+        //2
+        let divMainContent = document.createElement('Div');
         divMainContent.className = 'main-content';
         document.body.appendChild(divMainContent);
 
-        //3.
-        let divCenterContent = document.createElement('div');
+        //3
+        let divCenterContent = document.createElement('Div');
         divCenterContent.className = 'center-content';
         divMainContent.appendChild(divCenterContent);
 
-        //4.
-        let addP = document.createElement('p');
-        addP.innerHTML = 'Exercicios para praticar o assunto: "Trabalhando com elementos no javascript"'
-        divCenterContent.appendChild(addP);
+        //4
+        let tagP = document.createElement('p');
+        tagP.innerHTML = 'Exercicios para fixar a matéria da semana'
+        divCenterContent.appendChild(tagP);
 
-        //5.
+        //5 
         let divLeftContent = document.createElement('div');
         divLeftContent.className = 'left-content';
         divMainContent.appendChild(divLeftContent);
 
-        //6. 
+        //6
         let divRightContent = document.createElement('div');
         divRightContent.className = 'right-content';
         divMainContent.appendChild(divRightContent);
 
-        //7.
+        //7 
         let img = document.createElement('img');
         img.src = 'https://picsum.photos/200';
         img.className = 'small-image';
         divLeftContent.appendChild(img);
 
-        //8. 
+        //8 
         let listaUl = document.createElement('ul');
         divRightContent.appendChild(listaUl);
 
@@ -106,35 +106,35 @@
             listaUl.appendChild(listaLi);
         }
 
-
         //9.
-        for (let i = 1; i <= 3; i += 1) {
-            let title3 = document.createElement('h3');
-            divMainContent.appendChild(title3);
+        for (let index = 0; index < 3; index += 1) {
+            let tagH3 = document.createElement('h3');
+            divMainContent.appendChild(tagH3);
         }
 
-        //parte2
-        //1.
+        //parte 2
+        //1. 
         let title = document.getElementsByTagName('h1')[0];
         title.className = 'title';
 
         //2.
-        for (i = 0; i < 3; i += 1) {
-            let description = document.getElementsByTagName('h3')[i];
+        for (let index = 0; index < 3; index += 1) {
+            let description = document.getElementsByTagName('h3')[index];
+
             description.className = 'description';
         }
 
         //3.
-        let removeDiv = document.getElementsByClassName('left-content')[0];
-        divMainContent.removeChild(removeDiv);
+        let removeClassLeftContent = document.getElementsByClassName('left-content')[0];
+        divMainContent.removeChild(removeClassLeftContent);
 
         //4.
-        const centralizarDiv = document.getElementsByClassName('right-content')[0];
-        centralizarDiv.style.marginRight = 'auto';
+        let centralizar = document.getElementsByClassName('right-content')[0];
+        centralizar.style.marginRight = 'auto';
 
         //5.
-        let changeColorCenterContent = document.getElementsByClassName('center-content')[0];
-        changeColorCenterContent.parentNode.style.backgroundColor = 'rgb(34, 139, 34)';
+        let corFundo = document.getElementsByClassName('center-content')[0];
+        corFundo.parentNode.style.backgroundColor = 'green';
 
         //6.
         let listUl = document.getElementsByTagName('ul')[0];
