@@ -47,18 +47,28 @@
     //Bonus: respond to key presses so that the user doesn't have to click the button.
 
     //1.square this number
-
     let buttonSquare = document.querySelectorAll('button')[0];
     buttonSquare.addEventListener('click', squareNumber);
 
     let squareInput = document.querySelector('#square-input');
-
 
     function squareNumber() {
         let result = squareInput.value * squareInput.value;
         document.getElementById('solution').innerHTML = result;
     }
 
+    //2.half this number
+    let buttonHalf = document.querySelectorAll('button')[1];
+    buttonHalf.addEventListener('click', halfNumber);
+
+    let halfInput = document.querySelector('#half-input');
+
+    function halfNumber() {
+        let result = halfInput.value / 2;
+        document.getElementById('solution').innerHTML = result;
+    }
+
+    //3.fraction and whole
 
 
 </script>
