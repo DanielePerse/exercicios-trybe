@@ -69,6 +69,29 @@
     }
 
     //3.fraction and whole
+    let buttonPercentual = document.querySelectorAll('button')[2];
+    buttonPercentual.addEventListener('click', percentualNumber);
+
+    let percentual1Input = document.querySelector('#percent1-input');
+    let percentual2Input = document.querySelector('#percent2-input');
+
+    function percentualNumber() {
+        let num1 = percentual1Input.value;
+        let num2 = percentual2Input.value;
+        document.getElementById('solution').innerHTML = ((num1 / num2) * 100).toFixed(2) + '%';
+    }
+
+
+    //4.Calculate area of circle with radius
+    let buttonArea = document.querySelectorAll('button')[3];
+    buttonArea.addEventListener('click', areaNumber);
+
+    let areaInput = document.querySelector('#area-input');
+
+    function areaNumber() {
+        let result = (areaInput.value ** 2) * 3.14159;
+        document.getElementById('solution').innerHTML = result;
+    }
 
 
 </script>
