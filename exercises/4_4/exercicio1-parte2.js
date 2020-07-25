@@ -1,5 +1,3 @@
-//ter um for para ler cada letra de trás pra frente e comparar com a palavra original. Se a posição das letras continuarem iguais, então true, se não false.
-
 let string = "";
 
 function palindromo(string) {

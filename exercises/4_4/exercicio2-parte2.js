@@ -1,5 +1,3 @@
-//solução escrita: ter uma função que receba o array como parametro. Percorrer o array. Comparar os itens do array e descobrir o maior. Ir guardando os valores maiores. No fim, imprimir o índice do número maior.
-
 let arrayInteiros = [2, 33, 6, 7, 10, 1];
 
 function array(inteiros) {
