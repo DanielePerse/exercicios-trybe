@@ -8,6 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <header>
+      <h1 class="main-title">Formulário de currículo</h1>
+      <p><em>Faça seu currículo de forma fácil e tranquila!</em></p>
+  </header><br>
+
+  <fieldset>
+    <label>Nome</label>
+    <input type="text" maxlength="40" required="required" placeholder="digite seu nome"><br>
+
+    <label>E-mail</label>
+    <input type="text" maxlength="50" required="required" placeholder="digite seu e-mail"><br>
+
+    <label>CPF</label>
+    <input type="text" maxlength="11" required="required" placeholder="digite apenas números"><br>
+
+    <label>Endereço</label>
+    <input type="text" maxlength="200" required="required" placeholder="digite seu endereço"><br>
+
+    <label>Cidade</label>
+    <input type="text" maxlength="28" required="required" placeholder="digite o nome da sua cidade"><br>
+
+    <label>CPF</label>
+    <input type="text" maxlength="11" required="required" placeholder="digite seu CPF (sem pontos e traços)"><br>
+
+    <select required name="Estado">
+        <option selected value="">Selecione sua cidade</option>
+    </select><br>
+
+    <label for="tipo">Tipo: <input id="tipo" name="tipo de habitação "type="radio">Casa</label>
+    <label for="tipo1"><input id="tipo1" name="tipo de habitação "type="radio">Apartamento</label>
+
+  </fieldset>    
 </body>
 </html>
