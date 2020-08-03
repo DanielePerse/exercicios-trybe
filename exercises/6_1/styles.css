@@ -22,3 +22,17 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+#enviar {
+    display: block;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    background-color: whitesmoke;
+    border: 2px solid grey;
+    text-align: left;
+    margin-bottom: 30px;
+  }
