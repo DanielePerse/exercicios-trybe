@@ -16,6 +16,7 @@ function validarDados(event) {
         event.preventDefault();
         alert("data inválida, por favor, informar no formato DD/MM/AAAA");
     }
+    console.log("enviar")
 }
 
 window.onload = function () {

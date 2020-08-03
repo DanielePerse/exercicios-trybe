@@ -35,4 +35,29 @@ fieldset {
     border: 2px solid grey;
     text-align: left;
     margin-bottom: 30px;
-  }
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+  
+input:valid {
+    border: 2px solid black;
+}
+
+select:invalid {
+    border: 2px solid red;
+}
+  
+select:valid {
+    border: 2px solid black;
+}
+
+
+textarea:invalid {
+    border: 2px solid red;
+}
+  
+textarea:valid {
+    border: 2px solid black;
+}
