@@ -4,60 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bulma-rtl.min.css">
     <title>Document</title>
 </head>
+
 <body>
-  <header>
-      <h1 class="main-title">Formulário de currículo</h1>
-      <p><em>Faça seu currículo de forma fácil e tranquila!</em></p>
-  </header><br>
 
-  <fieldset>
+  <div>
+    <h1 class="title is-1 is-spaced">Formulário de currículo</h1>
+    <p class="subtitle is-4" >Faça seu currículo de forma fácil e tranquila!</p>
+  </div>
 
-    <label>Nome</label>
-    <input type="text" id="nome" maxlength="40" required="required" placeholder="informe seu nome"><br>
 
-    <label>E-mail</label>
-    <input type="text" id="e-mail" maxlength="50" required="required" placeholder="informe seu e-mail"><br>
+  <form action="" method="get" id="form">
 
-    <label>CPF</label>
-    <input type="text" id="cpf" maxlength="11" required="required" placeholder="informe apenas números"><br>
+    <fieldset>
 
-    <label>Endereço</label>
-    <input type="text" id="endereco" maxlength="200" required="required" placeholder="informe seu endereço"><br>
+      <div>
+        <label class="label">Nome</label>
 
-    <label>Cidade</label>
-    <input type="text" id="cidade" maxlength="28" required="required" placeholder="informe sua cidade"><br>
-    
-    <label for="estado">Selecione seu Estado</label>
-    <select name="estado" id="estado" required="required"></select><br>
+        <div>
+          <input type="text" id="nome" maxlength="40" required="required" placeholder="informe seu nome"><br>
+        </div>        
+      </div>
+
+      <div>
+        <label class="label">E-mail</label>
+
+        <div>
+          <input type="text" id="e-mail" maxlength="50" required="required" placeholder="informe seu e-mail"><br>
+        </div>
+      </div>
+
+      <div>
+        <label class="label">CPF</label>
+
+        <div>
+          <input type="text" id="cpf" maxlength="11" required="required" placeholder="informe apenas números"><br>
+        </div>
+      </div>
+
+      <div>
+        <label class="label">Endereço</label>
+
+        <div>
+          <input type="text" id="endereco" maxlength="200" required="required" placeholder="informe seu endereço"><br>
+        </div>
+      </div>
+      
+      <div>
+        <label class="label">Cidade</label>
+
+        <div>
+          <input type="text" id="cidade" maxlength="28" required="required" placeholder="informe sua cidade"><br>
+        </div>
+      </div>
+      
+      <div>
+        <label class="label" for="estado">Selecione seu Estado</label>
+
+        <div>
+          <select name="estado" id="estado" required="required"></select><br>
+        </div>
+      </div>
+
+      <div> <!-- verificar vídeo professor oliva em 03.08 -->
+        <legend>Tipo:</legend>
+        <label for="tipo"><input id="tipo" name="tipo-de-habitação" type="radio" value="casa" required>Casa</label>
+        <label for="tipo1"><input id="tipo1" name="tipo-de-habitação" type="radio" value="apartamento" required>Apartamento</label>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      
+      <div class="field">
+        <label class="label" for="resumo">Resumo do currículo</label>
+
+        <div class="control">
+          <textarea class="textarea is-primary is-small" type="text" id="resumo" required="required" maxlength="1000" placeholder="digite aqui" cols="50" rows="10" ></textarea><br>
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="cargo">Cargo</label>
+
+        <div>
+          <input type="text" id="cargo" maxlength="40" required="required" placeholder="informe seu último cargo">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="descricaoCargo">Descrição do Cargo</label>
+
+        <div>
+          <input type="text" id="descricaoCargo" maxlength="500" required="required" placeholder="faça uma breve descrição do seu último cargo">
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="dataInicio">Data de início</label>
+
+        <div>
+          <input type="text" id="dataInicio" required="required" placeholder="formato data">
+        </div>
+      </div>    
+
+    </fieldset>
 
     <div>
-      <legend>Tipo:</legend>
-      <label for="tipo"><input id="tipo" name="tipo de habitação "type="radio" required="required">Casa</label>
-      <label for="tipo1"><input id="tipo1" name="tipo de habitação "type="radio" required="required">Apartamento</label>
-    </div>
+      <button class="tag is-success" type="submit" id="enviar">Enviar</button>
+      <button class="tag is-danger" type="reset" id="limpar">Limpar</button>
+    </div>  
 
-  </fieldset>
+  </form>
 
-  <fieldset>
+  <div id="dadosConsolidados" type="reset"></div>
 
-  <label for="resumo">Resumo do currículo</label><br>
-  <textarea type="text" id="resumo" required="required" maxlength="1000" placeholder="digite aqui" cols="50" rows="10" ></textarea><br>
-
-  <label for="cargo">Cargo</label>
-  <input type="text" id="cargo" maxlength="40" required="required" placeholder="informe seu último cargo"><br>
-
-  <label for="descricaoCargo">Descrição do Cargo</label>
-  <input type="text" id="descricaoCargo" maxlength="500" required="required" placeholder="faça uma breve descrição do seu último cargo"><br>
-
-  <label for="dataInicio">Data de início</label>
-  <input type="text" id="dataInicio" required="required" placeholder="formato data"><br>
-
-  </fieldset>
-
-  <button id="enviar">Enviar</button>
- 
 </body>
 </html>

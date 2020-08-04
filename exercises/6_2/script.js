@@ -9,21 +9,77 @@ function criarListaDeEstados(estados) {
     }
 }
 
-
-function validarDados(event) {
+function validarData() {
     const arrayDataInicio = document.querySelector("#dataInicio").value.split("/");
     if((arrayDataInicio.length !== 3) || (arrayDataInicio[0] <= 0 || arrayDataInicio[0] > 31) || (arrayDataInicio[1] <= 0 || arrayDataInicio[1] > 12) || (arrayDataInicio[2] < 0)) {
-        event.preventDefault();
         alert("data inválida, por favor, informar no formato DD/MM/AAAA");
     }
-    console.log("enviar")
+}
+
+function validarCpf() {
+    const cpf = document.querySelector("#cpf").value;
+    if (cpf.length !== 11) {
+        alert("Por favor, digitar somente números.");
+    }
+}
+
+
+function validarTipoHabitacao() {
+    const tipoHabitacao = document.getElementsByName("tipo-de-habitação");
+    for (let i = 0; i < tipoHabitacao; i += 1) {
+        if (tipoHabitacao[i] === true) {
+            tipoHabitacao[i].value;
+        }
+    }
+}
+
+
+
+function validarDados(event) { 
+    
+    const nome = document.getElementById("nome").value;
+    const eMail = document.getElementById("e-mail").value;
+    const cpf = document.getElementById("cpf").value;
+    validarCpf(cpf);
+    const endereco = document.getElementById("endereco").value;
+    const cidade = document.getElementById("cidade").value;
+    const estado = estados[document.getElementById("estado").value];
+    const tipo = document.getElementsByName("tipo-de-habitação").value;
+    validarTipoHabitacao(tipo);
+    const resumoCurriculo = document.getElementById("resumo").value;
+    const cargo = document.getElementById("cargo").value;
+    const descricaoCargo = document.getElementById("descricaoCargo").value;
+    const dataInicio = document.getElementById("dataInicio").value;
+    validarData (dataInicio);
+
+    event.preventDefault();
+    
+
+    const dadosGerais = [nome, eMail, cpf, endereco, cidade, estado, resumoCurriculo, cargo, descricaoCargo, dataInicio];
+
+    for (let index = 0; index < dadosGerais.length; index += 1) {
+        const dadosConsolidados = document.getElementById("dadosConsolidados");
+        const novoElemento = document.createElement("p");
+        novoElemento.innerHTML = dadosGerais[index];
+        dadosConsolidados.appendChild(novoElemento);
+    }    
+}
+
+function apagarDados() {
+        const paragrafos = document.querySelector("p");
+    for (let i = 0; i < paragrafos.length; i += 1) {
+        removeparagrafo = paragrafos[i];
+        getElementById("dadosConsolidados").removeChild(removeparagrafo);
+    }    
 }
 
 window.onload = function () {
     criarListaDeEstados(estados);
 
-    const botao = document.getElementById('enviar');
-    botao.addEventListener('click', validarDados);
+    const botaoEnviar = document.getElementById('enviar');
+    botaoEnviar.addEventListener('click', validarDados);
 
+    const botaoLimpar = document.getElementById('limpar');
+    botaoLimpar.addEventListener('click', apagarDados);
 }
 ;
