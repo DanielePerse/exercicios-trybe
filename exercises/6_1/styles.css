@@ -61,3 +61,10 @@ textarea:invalid {
 textarea:valid {
     border: 2px solid black;
 }
+
+#dadosConsolidados {
+    border: 2px solid black;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 1300px;
+}
