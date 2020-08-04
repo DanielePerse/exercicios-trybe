@@ -5,117 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bulma-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
 
-  <div>
-    <h1 class="title is-1 is-spaced">Formulário de currículo</h1>
-    <p class="subtitle is-4" >Faça seu currículo de forma fácil e tranquila!</p>
-  </div>
+  <header class="section">
+    <h1 class="title has-text-centered is-1 is-spaced">Formulário de currículo</h1>
+    <p class="subtitle has-text-centered  is-4" ><em>Faça seu currículo de forma fácil e tranquila!</em></p>
+  </header>
 
 
-  <form action="" method="get" id="form">
+  <form action="" method="get" id="form">   
 
-    <fieldset>
+    <div class="field">
+      <label class="label">Nome</label>
 
-      <div>
-        <label class="label">Nome</label>
+      <div class="control">
+        <input class="input" type="text" id="nome" maxlength="40" required="required" placeholder="informe seu nome"><br>
+      </div>        
+    </div>
 
-        <div>
-          <input type="text" id="nome" maxlength="40" required="required" placeholder="informe seu nome"><br>
-        </div>        
-      </div>
-
-      <div>
-        <label class="label">E-mail</label>
-
-        <div>
-          <input type="text" id="e-mail" maxlength="50" required="required" placeholder="informe seu e-mail"><br>
-        </div>
-      </div>
+    <div>
+      <label class="label">E-mail</label>
 
       <div>
-        <label class="label">CPF</label>
-
-        <div>
-          <input type="text" id="cpf" maxlength="11" required="required" placeholder="informe apenas números"><br>
-        </div>
+        <input type="text" id="e-mail" maxlength="50" required="required" placeholder="informe seu e-mail"><br>
       </div>
+    </div>
+
+    <div>
+      <label class="label">CPF</label>
 
       <div>
-        <label class="label">Endereço</label>
-
-        <div>
-          <input type="text" id="endereco" maxlength="200" required="required" placeholder="informe seu endereço"><br>
-        </div>
+        <input type="text" id="cpf" maxlength="11" required="required" placeholder="informe apenas números"><br>
       </div>
-      
-      <div>
-        <label class="label">Cidade</label>
+    </div>
 
-        <div>
-          <input type="text" id="cidade" maxlength="28" required="required" placeholder="informe sua cidade"><br>
-        </div>
-      </div>
-      
-      <div>
-        <label class="label" for="estado">Selecione seu Estado</label>
-
-        <div>
-          <select name="estado" id="estado" required="required"></select><br>
-        </div>
-      </div>
-
-      <div> <!-- verificar vídeo professor oliva em 03.08 -->
-        <legend>Tipo:</legend>
-        <label for="tipo"><input id="tipo" name="tipo-de-habitação" type="radio" value="casa" required>Casa</label>
-        <label for="tipo1"><input id="tipo1" name="tipo-de-habitação" type="radio" value="apartamento" required>Apartamento</label>
-      </div>
-
-    </fieldset>
-
-    <fieldset>
-      
-      <div class="field">
-        <label class="label" for="resumo">Resumo do currículo</label>
-
-        <div class="control">
-          <textarea class="textarea is-primary is-small" type="text" id="resumo" required="required" maxlength="1000" placeholder="digite aqui" cols="50" rows="10" ></textarea><br>
-        </div>
-      </div>
+    <div>
+      <label class="label">Endereço</label>
 
       <div>
-        <label class="label" for="cargo">Cargo</label>
-
-        <div>
-          <input type="text" id="cargo" maxlength="40" required="required" placeholder="informe seu último cargo">
-        </div>
+        <input type="text" id="endereco" maxlength="200" required="required" placeholder="informe seu endereço"><br>
       </div>
+    </div>
+    
+    <div>
+      <label class="label">Cidade</label>
 
       <div>
-        <label class="label" for="descricaoCargo">Descrição do Cargo</label>
-
-        <div>
-          <input type="text" id="descricaoCargo" maxlength="500" required="required" placeholder="faça uma breve descrição do seu último cargo">
-        </div>
+        <input type="text" id="cidade" maxlength="28" required="required" placeholder="informe sua cidade"><br>
       </div>
+    </div>
+    
+    <div>
+      <label class="label" for="estado">Selecione seu Estado</label>
 
       <div>
-        <label class="label" for="dataInicio">Data de início</label>
+        <select name="estado" id="estado" required="required"></select><br>
+      </div>
+    </div>
 
-        <div>
-          <input type="text" id="dataInicio" required="required" placeholder="formato data">
-        </div>
-      </div>    
+    <div class="field"> 
+      <label class="label">Tipo:</label>
+      <div class="control">
+        <label class="radio" for="tipo">
+        <input id="tipo" name="tipo-de-habitação" type="radio" value="casa" required>
+        Casa</label>
 
-    </fieldset>
+        <label class="radio" for="tipo1">
+        <input id="tipo1" name="tipo-de-habitação" type="radio" value="apartamento" required>
+        Apartamento</label>
+      </div>
+    </div>
 
+         
+    <div class="field">
+      <label class="label" for="resumo">Resumo do currículo</label>
+
+      <div class="control">
+        <textarea class="textarea is-primary is-small" type="text" id="resumo" required="required" maxlength="1000" placeholder="digite aqui" cols="50" rows="10" ></textarea><br>
+      </div>
+    </div>
+
+    <div>
+      <label class="label" for="cargo">Cargo</label>
+
+      <div>
+        <input type="text" id="cargo" maxlength="40" required="required" placeholder="informe seu último cargo">
+      </div>
+    </div>
+
+    <div>
+      <label class="label" for="descricaoCargo">Descrição do Cargo</label>
+
+      <div>
+        <input type="text" id="descricaoCargo" maxlength="500" required="required" placeholder="faça uma breve descrição do seu último cargo">
+      </div>
+    </div>
+
+    <div>
+      <label class="label" for="dataInicio">Data de início</label>
+
+      <div>
+        <input type="text" id="dataInicio" required="required" placeholder="formato data">
+      </div>
+    </div>    
+
+    
     <div>
       <button class="tag is-success" type="submit" id="enviar">Enviar</button>
       <button class="tag is-danger" type="reset" id="limpar">Limpar</button>
-    </div>  
+    </div><br><br>
 
   </form>
 
