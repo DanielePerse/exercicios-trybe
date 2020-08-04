@@ -28,6 +28,15 @@ body {
     font-size: 20px;
     margin: auto;
     margin-bottom: 30px;
+    text-align: center;
+}
+
+#limpar {
+    display: block;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 fieldset {
@@ -65,6 +74,6 @@ textarea:valid {
 #dadosConsolidados {
     border: 2px solid black;
     margin-bottom: 50px;
-    height: 300px;
+    height: 600px;
     width: 1300px;
 }

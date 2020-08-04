@@ -24,22 +24,35 @@ function validarCpf() {
 }
 
 
+function validarTipoHabitacao() {
+    const tipoHabitacao = document.getElementsByName("tipo-de-habitação");
+    for (let i = 0; i < tipoHabitacao; i += 1) {
+        if (tipoHabitacao[i] === true) {
+            tipoHabitacao[i].value;
+        }
+    }
+}
+
+
+
 function validarDados(event) { 
-    event.preventDefault();
     
     const nome = document.getElementById("nome").value;
     const eMail = document.getElementById("e-mail").value;
     const cpf = document.getElementById("cpf").value;
-    validarCpf (cpf);
+    validarCpf(cpf);
     const endereco = document.getElementById("endereco").value;
     const cidade = document.getElementById("cidade").value;
-    const estado = document.getElementById("estado").value;
+    const estado = estados[document.getElementById("estado").value];
+    const tipo = document.getElementsByName("tipo-de-habitação").value;
+    validarTipoHabitacao(tipo);
     const resumoCurriculo = document.getElementById("resumo").value;
     const cargo = document.getElementById("cargo").value;
     const descricaoCargo = document.getElementById("descricaoCargo").value;
     const dataInicio = document.getElementById("dataInicio").value;
     validarData (dataInicio);
 
+    event.preventDefault();
     
 
     const dadosGerais = [nome, eMail, cpf, endereco, cidade, estado, resumoCurriculo, cargo, descricaoCargo, dataInicio];
@@ -52,11 +65,21 @@ function validarDados(event) {
     }    
 }
 
+function apagarDados() {
+        const paragrafos = document.querySelector("p");
+    for (let i = 0; i < paragrafos.length; i += 1) {
+        removeparagrafo = paragrafos[i];
+        getElementById("dadosConsolidados").removeChild(removeparagrafo);
+    }    
+}
+
 window.onload = function () {
     criarListaDeEstados(estados);
 
-    const botao = document.getElementById('enviar');
-    botao.addEventListener('submit', validarDados);
+    const botaoEnviar = document.getElementById('enviar');
+    botaoEnviar.addEventListener('click', validarDados);
 
+    const botaoLimpar = document.getElementById('limpar');
+    botaoLimpar.addEventListener('click', apagarDados);
 }
 ;

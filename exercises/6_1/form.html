@@ -14,7 +14,7 @@
       <p><em>Faça seu currículo de forma fácil e tranquila!</em></p>
   </header><br>
 
-  <form action="" method="get" class="form">
+  <form action="" method="get" id="form">
 
     <fieldset>
 
@@ -38,8 +38,8 @@
 
       <div>
         <legend>Tipo:</legend>
-        <label for="tipo"><input id="tipo" name="tipo de habitação "type="radio">Casa</label>
-        <label for="tipo1"><input id="tipo1" name="tipo de habitação "type="radio">Apartamento</label>
+        <label for="tipo"><input id="tipo" name="tipo-de-habitação" type="radio" value="casa" required>Casa</label>
+        <label for="tipo1"><input id="tipo1" name="tipo-de-habitação" type="radio" value="apartamento" required>Apartamento</label>
       </div>
 
     </fieldset>
@@ -60,11 +60,14 @@
 
     </fieldset>
 
-    <button type="submit" id="enviar">Enviar</button>
- 
+    <div>
+      <button class="botao" type="submit" id="enviar">Enviar</button>
+      <button class="botao" type="reset" id="limpar">Limpar</button>
+    </div>  
+
   </form>
 
-  <div id="dadosConsolidados" ></div>
+  <div id="dadosConsolidados" type="reset"></div>
 
 </body>
 </html>
