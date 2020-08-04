@@ -9,21 +9,28 @@ function criarListaDeEstados(estados) {
     }
 }
 
-
-function validarDados(event) {
+function validarData(event) {
     const arrayDataInicio = document.querySelector("#dataInicio").value.split("/");
     if((arrayDataInicio.length !== 3) || (arrayDataInicio[0] <= 0 || arrayDataInicio[0] > 31) || (arrayDataInicio[1] <= 0 || arrayDataInicio[1] > 12) || (arrayDataInicio[2] < 0)) {
         event.preventDefault();
         alert("data inválida, por favor, informar no formato DD/MM/AAAA");
     }
-    console.log("enviar")
+}
+
+function validarCpf(event) {
+    const cpf = document.querySelector("#cpf").value;
+    if (cpf.length !== 11) {
+        alert("Por favor, digitar somente números.")
+    }
 }
 
 window.onload = function () {
     criarListaDeEstados(estados);
 
     const botao = document.getElementById('enviar');
-    botao.addEventListener('click', validarDados);
+    botao.addEventListener('submit', validarData);
+    botao.addEventListener('submit', validarCpf);
+    botao.addEventListener('submit', demaisDados);
 
 }
 ;
