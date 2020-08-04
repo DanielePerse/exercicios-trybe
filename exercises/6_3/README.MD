@@ -8,6 +8,7 @@ Como os exercícios serão feitos na própria plataforma, crie um diretório em 
 [x] Para o exercício número 8 do site número 2, o CSS deve ser salvo em exercises/6.3/2/8.css;
 [x] Para o exercício número 9 do site número 2, o CSS deve ser salvo em exercises/6.3/2/9.css.
 
-1. [x]Faça os exercícios de 1 a 13 neste site. O seu objetivo é colocar os sapos em cima de suas respectivas folhas.
+1. [x] Faça os exercícios de 1 a 13 neste site. O seu objetivo é colocar os sapos em cima de suas respectivas folhas. https://flexboxfroggy.com/
 
-1. [x]Neste segundo link, complete os exercícios de 1 a 9. Seu objetivo aqui é posicionar as torres de defesa para que elas abatam os inimigos. Você terá de pensar qual é a melhor posição para cada torre.
+1. [x] Neste segundo link, complete os exercícios de 1 a 9. Seu objetivo aqui é posicionar as torres de defesa para que elas abatam os inimigos. Você terá de pensar qual é a melhor posição para cada torre.
+http://www.flexboxdefense.com/
