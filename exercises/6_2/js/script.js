@@ -81,5 +81,7 @@ window.onload = function () {
 
     const botaoLimpar = document.getElementById('limpar');
     botaoLimpar.addEventListener('click', apagarDados);
+
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
 }
 ;
