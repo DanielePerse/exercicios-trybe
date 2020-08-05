@@ -1,7 +1,7 @@
 #pond {
     display: flex;
-}
+  }
   
-.yellow {
-    order: 1;
-}
+  .red {
+  order: -3;
+  }
