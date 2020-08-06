@@ -1,9 +1,15 @@
+* {
+    margin: 5px;
+}
+
 body {
-
+    font-size: 22px;
 }
+
 h1 {
-
+    font-size: 20px;
 }
+
 h2 {
 
 }
@@ -14,4 +20,39 @@ img {
 
 figure {
     margin: 0;
+    margin-bottom: 50px;
+   
+}
+
+@media (min-width: 800px) {
+    * {
+        margin: 20px;
+    }
+
+    body {
+        background-color: teal;
+        font-size: 25px;
+    }
+
+    .figuras {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    * {
+        margin: 25px;
+    }
+
+    body {
+        background-color:pink;
+        font-size: 30px;
+        max-width: 200em;
+    }
+
+    .figuras {
+        display: flex;
+        flex-wrap: wrap;
+    } 
 }
