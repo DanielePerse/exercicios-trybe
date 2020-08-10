@@ -1,27 +1,29 @@
 ## Parte I
 Agora você vai fazer alguns exercícios de fixação.
 
-Comparando o escopo de variáveis var e let;
+1. [x] Comparando o escopo de variáveis var e let;
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/compare-scopes-of-the-var-and-let-keywords
 
-Modificando um array declarado como const.
+2. [x] Modificando um array declarado como const.
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/mutate-an-array-declared-with-const
+
 
 ## Parte II
 Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let, const, arrow functions e template literals.
 
-Crie uma função que receba um número e retorne seu fatorial.
+1. [x] Crie uma função que receba um número e retorne seu fatorial.
 
 Na matemática, o fatorial de um número não negativo N, com a notação N!, é o produto de todos os inteiros menores ou iguais a N. Exemplo: 4! = 4 3 2 * 1 = 24.
 
 Bônus (opcional): tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha.
 
-Crie uma função que receba uma frase e retorne qual a maior palavra.
+2. [x] Crie uma função que receba uma frase e retorne qual a maior palavra.
 
 Exemplo:
 Copiar
       longestWord("Antônio foi no banheiro e não sabemos o que aconteceu") // retorna 'aconteceu'
-Crie uma página que contenha:
+
+3. [x] Crie uma página que contenha:
 
 Um botão ao qual será associado um event listener;
 
@@ -29,7 +31,7 @@ Uma variável clickCount no arquivo JavaScript que acumule o número de clicks n
 
 Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada.
 
-Crie um código JavaScript com a seguinte especificação:
+4. [x] Crie um código JavaScript com a seguinte especificação:
 
 Não se esqueça de usar template literals
 
