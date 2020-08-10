@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="contagem"></h1>
+  <button id="button">clique aqui!</button>
+</body>
+<script>
+
+let clickCount = 0;
+let mostrarContagem = document.getElementById('contagem');
+
+document.getElementById('button').addEventListener('click', () => mostrarContagem.innerHTML = clickCount += 1);
+</script>
+</html>
