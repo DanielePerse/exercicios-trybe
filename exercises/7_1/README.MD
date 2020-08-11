@@ -1,4 +1,4 @@
-## Parte I
+## Parte I -
 Agora você vai fazer alguns exercícios de fixação.
 
 1. [x] Comparando o escopo de variáveis var e let;
