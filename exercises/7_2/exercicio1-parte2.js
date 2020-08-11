@@ -34,3 +34,8 @@ const tamanhoObjeto = (objeto) => {
   console.log(Object.keys(objeto).length);
 }
 tamanhoObjeto(lesson1);
+
+const valoresObjeto = (objeto) => {
+  console.log(Object.values(objeto));
+}
+valoresObjeto(lesson3);
