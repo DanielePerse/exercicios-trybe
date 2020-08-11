@@ -29,3 +29,8 @@ const listarKeys = (objeto) => {
   console.log(Object.keys(objeto));
 }
 listarKeys(lesson1);
+
+const tamanhoObjeto = (objeto) => {
+  console.log(Object.keys(objeto).length);
+}
+tamanhoObjeto(lesson1);
