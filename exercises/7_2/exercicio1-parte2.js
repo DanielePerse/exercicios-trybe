@@ -39,3 +39,8 @@ const valoresObjeto = (objeto) => {
   console.log(Object.values(objeto));
 }
 valoresObjeto(lesson3);
+
+const allLessons = Object.assign({lesson1, lesson2, lesson3});
+console.log(Object.assign(lesson1, lesson2, lesson3));
+
+//Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
