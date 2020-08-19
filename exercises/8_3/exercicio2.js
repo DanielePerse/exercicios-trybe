@@ -64,9 +64,27 @@ const books = [
   },
 ];
 
+    //if (index === books.length - 1) {
+      //`${acc} ${currentValue.author.name}.`, 'Nomes:'
+    //} else {
+      //`${acc} ${currentValue.author.name},`, 'Nomes:'
+    //}
 
 function allNames() {
-  // escreva seu código aqui
+  return books.reduce(
+    (acc, currentValue, index, array) => {
+      let result = `${acc} ${currentValue.author.name},`
+      
+      if (index === array.length - 1) 
+        result = `${acc} ${currentValue.author.name}.`;
+      
+      return result
+      
+    }, 
+    'Nomes:'
+  )
 }
+
+console.log(allNames());
 
 assert.deepEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
