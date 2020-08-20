@@ -7,10 +7,18 @@ const names = [
   'Abeladerco', 'Adieidy',  'Alarucha',
 ];
 
-
-
 function containsA() {
-  // escreva seu código aqui
+const separador = names.toString().split('');
+ 
+const contadorA = separador.reduce((acc, currentValue) => {
+  if (currentValue === 'a'|| currentValue === 'A') {
+    acc += 1;
+  }
+  return acc;
+}, 0)
+return contadorA;
 }
 
+
 assert.deepEqual(containsA(), 20);
+
