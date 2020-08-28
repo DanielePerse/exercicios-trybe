@@ -36,8 +36,8 @@ const fetchPromise = () => {
 
   newPromise
     //.then((response) => console.log("resultado dentro de 8000"))
-    .then(somaArray => console.log([2, 3, 5, 10].map(array => somaArray / array)))
-    .then(newArray => newArray.reduce((acc, currentValue) => acc + currentValue, 0))
+    .then(somaArray => [2, 3, 5, 10].map(array => somaArray / array))
+    .then(newArray => console.log(newArray.reduce((acc, currentValue) => acc + currentValue)))
     .catch((error) => console.log("É mais de oito mil! Essa promise deve estar quebrada!"));
 
 }
