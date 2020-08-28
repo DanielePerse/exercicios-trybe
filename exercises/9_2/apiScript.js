@@ -27,7 +27,7 @@ const fetchPromise = () => {
 
     //se <8000 resolve, se >= 8000 reject
     if (somaArray < 8000) {
-      resolve();
+      resolve(somaArray);
     } else {
       reject();
     }
@@ -35,8 +35,9 @@ const fetchPromise = () => {
   });
 
   newPromise
-    .then((response) => console.log("resultado dentro de 8000"))
-    .catch((error) => console.log("valor ficou >= 8000"));
+    //.then((response) => console.log("resultado dentro de 8000"))
+    .then(somaArray => console.log([2, 3, 5, 10].map(array => somaArray / array)))
+    .catch((error) => console.log("É mais de oito mil! Essa promise deve estar quebrada!"));
 
 }
 fetchPromise();
