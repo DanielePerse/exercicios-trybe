@@ -1,9 +1,11 @@
-Agora a prática
-Escreva um teste que verifique a chamada do callback de uma função uppercase, que transforma as letras de uma palavra em letras maiúsculas. Lembre-se de ter cuidado com os falso-positivos em testes assíncronos.
+## Agora a prática
+1. [x] Escreva um teste que verifique a chamada do callback de uma função uppercase, que transforma as letras de uma palavra em letras maiúsculas. Lembre-se de ter cuidado com os falso-positivos em testes assíncronos.
+
 Copiar
 const uppercase = (str, callback) => {
   callback(str.toUpperCase());
 }
+
 Copiar
 **Código-base para os exercícios 2 e 3:**
 
