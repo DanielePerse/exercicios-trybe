@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+body {
+  background-color: rgb(255, 234, 0);
+}
+
+.cart {
+  background-color: rgb(29, 53, 87);
+  height: 200px;
+  width: 200px;
+  border-radius: 10%;
+}
+
+.title {
+  align-items: center;
+}
