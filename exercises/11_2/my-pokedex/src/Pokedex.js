@@ -6,8 +6,8 @@ class Pokedex extends React.Component {
   render () {
     return (
       <div>
-        <h1 class='title'>POKEDEX</h1>
-        <div class='main-container'>
+        <h1 className="title">POKEDEX</h1>
+        <div className="main-container">  
         {pokemons.map((pokemon, index) => {
           return <Pokemon
             key={index}

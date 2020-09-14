@@ -4,15 +4,30 @@
 
 body {
   background-color: rgb(255, 234, 0);
+  box-sizing: border-box;
 }
 
 .cart {
   background-color: rgb(29, 53, 87);
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 10%;
+  margin: 10px;
+  color: white;
 }
 
 .title {
-  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
+
+.cart-container {
+  padding: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 48px 30px;
 }

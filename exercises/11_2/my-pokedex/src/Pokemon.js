@@ -6,11 +6,13 @@ class Pokemon extends React.Component {
     const { name, type, weightValue, weightUnit, image} = this.props;
 
     return (
-      <div class='cart'>
-        <p> {name} </p>
-        <p> {type} </p>
-        <p> {`Average weight: ${weightValue} ${weightUnit}`} </p>
-        <img src={image} alt={name}/>
+      <div className="cart">
+        <div className="cart-container">
+          <p> {name} </p>
+          <p> {type} </p>
+          <p> {`Average weight: ${weightValue} ${weightUnit}`} </p>
+          <img src={image} alt={name}/>
+        </div>
       </div>
     )
   }
