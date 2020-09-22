@@ -1,4 +1,5 @@
 import React from 'react';
+import './DogImages.css';
 
 class DogImages extends React.Component {
 
@@ -35,8 +36,8 @@ class DogImages extends React.Component {
 
     console.log("render")
     return (
-      <div>
-        <h1>Doguinhos fofíneos</h1>
+      <div className="container">
+        <h1 className="main-title">Doguinhos fofíneos</h1>
         {isLoading ? <p>Loading...</p> : <img src={this.state.imageDoguinho} alt="imagem doguinho" /> }
         <button onClick={this.fetchImage}>Required New Dog</button>
       </div>
