@@ -9,7 +9,8 @@ class DogImages extends React.Component {
 
     this.state = {
       imageDoguinho: "",
-      isLoading: true
+      isLoading: true,
+      bread: ''
     }
 
     this.fetchImage = this.fetchImage.bind(this);
@@ -18,10 +19,14 @@ class DogImages extends React.Component {
   //a requisição deve ser assincrona! async await (alterar isso depois)
   fetchImage() {
     this.setState({ isLoading: true }, () => {
-      fetch('https://dog.ceo/api/breeds/image/random')
+      const requestHeader = { Header: { Accept: "aplication/json" } }
+      fetch('https://dog.ceo/api/breeds/image/random', requestHeader)
       .then(response => response.json())
       .then(response =>
-        this.setState({ imageDoguinho: response.message, isLoading: false }))
+        this.setState({
+          imageDoguinho: response.message,
+          isLoading: false
+        }))
     })
   }
 
@@ -30,6 +35,24 @@ class DogImages extends React.Component {
     console.log("componenteDidMount");
     this.fetchImage();
   }
+
+  //verificar se deve atualizar o componente (should)
+  shouldComponentUpdate() {
+    const {imageDoguinho} = this.state
+    const isBreedTerrier = imageDoguinho.includes('terrier')
+    if(isBreedTerrier)
+      alert('Terrier')
+
+    return true;
+    //return !isBreedTerrier
+    //return isBreedTerrier ? false : true
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    const {imageDoguinho} = prevState
+    localStorage.setItem("imageDoguinho", imageDoguinho)
+  }
+
 
   render () {
     const {isLoading} = this.state
