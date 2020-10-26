@@ -1,28 +1,26 @@
+// App.test.js
 import React from 'react';
-import './App.css';
+import { render } from '@testing-library/react'
+import App from './App';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      joke: '',
-    }
-  }
+afterEach(() => jest.clearAllMocks());
+it('fetch joke', async () => {
+  const joke = {
+    id: '7h3oGtrOfxc',
+    joke: 'Whiteboards ... are remarkable.',
+    status: 200,
+  };
 
-  componentDidMount() {
-    const API_URL = 'https://icanhazdadjoke.com/';
-    fetch(API_URL, { headers: { Accept: 'application/json' } })
-      .then((response) => response.json())
-      .then((data) => this.setState({ joke: data.joke }));
-  }
+  jest.spyOn(global, "fetch")
+  global.fetch.mockResolvedValue({
+    json: jest.fn().mockResolvedValue(joke),
+  });
 
-  render() {
-    return (
-      <div className="App">
-        {this.state.joke}
-      </div>
-    );
-  }
-}
-
-export default App;
+  const { findByText } = render(<App />);
+  await findByText('Whiteboards ... are remarkable.');
+  expect(global.fetch).toBeCalledTimes(1);
+  expect(global.fetch).toBeCalledWith(
+    'https://icanhazdadjoke.com/',
+    {"headers": {"Accept": "application/json"}}
+  );
+});
