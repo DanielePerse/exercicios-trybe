@@ -1,0 +1,1 @@
+exercicio aula ao vivo dia 16.4
