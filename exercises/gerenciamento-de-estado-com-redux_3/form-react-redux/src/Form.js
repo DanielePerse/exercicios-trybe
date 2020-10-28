@@ -15,7 +15,7 @@ class Form extends React.Component {
           <div>
             <label>
               Está ok?
-            <input name="isOk" type="checkbox" required value={value.isOk} onChange={({ target }) => addAssignment(target.name, target.value)}></input>
+            <input name="isOk" type="checkbox" required value={value.checkBox} onChange={({ target }) => addAssignment(target.checkBox)}></input>
             </label>
           </div>
 
@@ -59,7 +59,10 @@ class Form extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { value: state.formReducer }
+  return {
+    value: state.formReducer,
+    checkbox: state.formReducer.checkbox,
+  }
 };
 
 const mapDispatchToProps = (dispatch) => ({
