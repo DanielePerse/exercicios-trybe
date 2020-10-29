@@ -1,13 +1,6 @@
 export const NEW_ELEMENT = 'NEW_ELEMENT';
 
-export const addAssignment = (name, value, checkbox) => ({
+export const addAssignment = (payload) => ({
   type: NEW_ELEMENT,
-  name,
-  value,
-  checkbox,
+  payload
 });
-
-//export const addCheckbox = (value) => ({
-  //type: NEW_ELEMENT,
-  //value: false,
-//});
