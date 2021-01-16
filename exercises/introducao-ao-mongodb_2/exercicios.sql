@@ -1,0 +1,20 @@
+db.superheroes.find().limit(1);
+db.superheroes.find({'aspects.height': {$lt: 180}});
+db.superheroes.find({'aspects.height': {$lt: 180}}).count();
+db.superheroes.find({'aspects.height': {$lte: 180}}).count();
+db.superheroes.find({'aspects.height': {$gte: 200}}).limit(1);
+db.superheroes.find({'aspects.height': {$gte: 200}}).count();
+db.superheroes.find({'aspects.eyeColor': 'green'}); OU
+db.superheroes.find({'aspects.eyeColor': {$eq:'green'}});
+db.superheroes.find({'aspects.eyeColor': {$eq:'blue'}}).count();
+db.superheroes.find({'aspects.hairColor': {$in: ['Black', 'No Hair']}});
+db.superheroes.find({'aspects.hairColor': {$in: ['Black', 'No Hair']}}).count();
+db.superheroes.find({'aspects.hairColor': {$nin: ['Black', 'No Hair']}}).count();
+db.superheroes.find({'aspects.height': {$not: {$gt: 180}}}).count();
+db.superheroes.find({$and: [{race: {$not: {$eq: 'Human'}}}, {'aspects.height': {$not: {$gt: 180}}}]});
+db.superheroes.find({$and: [{ $or: [{'aspects.height': 180}, {'aspects.height': 200}] }, {publisher: 'Marvel Comics'}]});
+db.superheroes.find({$and: [ {'aspects.weight': {$gte: 80, $lte: 100} }, {$or: [{race: 'Human'}, {race: 'Mutant'}] }, {publisher: {$ne: 'DC Comics'} } ] });
+db.superheroes.find({ race: { $exists: false}}).count();
+db.superheroes.find({ 'aspects.hairColor': { $exists: true}}).count();
+db.superheroes.deleteOne({ publisher: 'Sony Pictures'});
+db.superheroes.deleteMany({ publisher: 'George Lucas'});
