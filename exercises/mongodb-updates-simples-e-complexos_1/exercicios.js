@@ -53,3 +53,24 @@ db.movies.updateMany({}, { $unset: { budget: "", estimatedBudget: "" } });
 
 // Exercício 13
 db.movies.updateMany({ title: { $in: ["Batman", "Home Alone" ]}}, { $max: { imdbRating: 17 }});
+
+// Bônus
+// Exercício 14
+db.xmen.updateMany({ class: "unknown" }, { $unset: { class: "" } });
+
+// Exercício 15
+db.xmen.updateMany( {}, {$rename: { "name": "hero_name", "true_name": "full_name" }}, { $set: { power: 100 }});
+
+// Exercício 16
+db.xmen.updateMany( { class: { $in: ["ômega", "gama"]}}, {$max: { power: 500 }});
+
+// Exercício 17
+db.xmen.updateMany( { class: "gama" }, {$min: { power: 300 }});
+
+// Exercício 18 - Decremente em 100 o poder dos mutantes não contêm a propriedade class.
+db.xmen.updateMany( { class: { $exists: false} }, {$inc: { power: -100 }});
+
+// Exercício 19
+
+
+// Exercício 20
