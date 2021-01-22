@@ -38,7 +38,7 @@ db.movies.insertMany([
 
 O MongoDb possui diversas ferramentas como por exemplo, mongo , mongosh , Compass e outras ferramentas de terceiros. Você pode utilizar o que achar melhor para executar as queries , o importante é realizá-las.
 
-1. Utilizando o operador $all , retorne todos os filmes que contenham action e adventure no array category .
+1. Utilizando o operador $all , retorne todos os filmes que contenham action e adventure no array category.
 
 2. Agora retorne os filmes que contenham action no array category e possuem nota do IMDB maior do que 7 .
 
