@@ -31,9 +31,9 @@ Exercício 3: Utilizando o estágio $match , escreva uma agregação para retorn
 
 Exercício 4: Conte quantos clientes do estado SC existem na coleção. Retorne um documento em que o campo _id contenha a UF e outro campo com o total.
 
-Exercício 5: Agrupe os clientes por sexo . Retorne o total de clientes de cada sexo no campo total.
+Exercício 5: Agrupe os clientes por sexo. Retorne o total de clientes de cada sexo no campo total.
 
-Exercício 6: Agrupe os clientes por sexo e uf . Retorne o total de clientes de cada sexo no campo total.
+Exercício 6: Agrupe os clientes por sexo e uf. Retorne o total de clientes de cada sexo no campo total.
 
 Exercício 7: Utilizando a mesma agregação do exercício anterior, adicione um estágio de projeção para modificar os documentos de saída, de forma que se pareçam com o documento a seguir (não se importe com a ordem dos campos):
 
