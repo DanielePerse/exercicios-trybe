@@ -1,4 +1,19 @@
-let readlineSync = require ('readline-sync');
+let inquirer = require('inquirer');
+
+inquirer
+  .prompt([
+    'Informe seu peso:'
+  ])
+  .then(answers => {
+    // Use user feedback for... whatever!!
+  })
+  .catch(error => {
+    if(error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else when wrong
+    }
+  });
 
 let peso = readlineSync.questionFloat('Informe seu peso:');
 let altura = readlineSync.questionFloat('Informe sua altura:');
