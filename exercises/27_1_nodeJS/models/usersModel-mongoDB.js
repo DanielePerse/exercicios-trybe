@@ -16,16 +16,13 @@ const createUser = async (firstName, lastName, email, password) => {
   });
 };
 
-const allUsers = async () => {
-  connection().then((db) => {
-    db.collection('users').find({}).toArray();
-  });
-}
+const allUsers = async () =>
+  connection().then((db) =>
+    db.collection('users').find({}).toArray());
 
 const userById = async (id) => {
-  const user = await connection().then((db) => {
-    db.collection('users').findOne(ObjectId(id))
-  });
+  const user = await connection().then((db) =>
+    db.collection('users').findOne(ObjectId(id)));
 
   if (!user) return null;
 
@@ -33,19 +30,16 @@ const userById = async (id) => {
 };
 
 const editUser = async (id, firstName, lastName, email, password) => {
-  connection().then((db) => {
+  connection().then((db) =>
     db.collection('users').updateOne(
       { _id: ObjectId(id) },
       { $set: { firstName, lastName, email, password } }
-    )
-  });
+    ));
 };
 
-const deleteUser = async (id) => {
-  connection().then((db) => {
-    db.collection('users').deleteOne({ _id: ObjectId(id) })
-  });
-};
+const deleteUser = async (id) =>
+  connection().then((db) =>
+    db.collection('users').deleteOne({ _id: ObjectId(id) }));
 
 module.exports = {
   isValid,

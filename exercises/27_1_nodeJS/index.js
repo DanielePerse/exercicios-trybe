@@ -26,7 +26,7 @@ app.get('/user', async (req, res) => {
 });
 
 app.get('/user/:id', async (req, res) => {
-  const id = Number(req.params.id);
+  const { id } = req.params;
 
   const user = await Users.userById(id);
 
