@@ -5,7 +5,8 @@ const app = express();
 app.use(bodyParser.json());
 const PORT = 3000;
 
-const Users = require('./models/usersModel');
+const Users = require('./models/usersModel-mongoDB');
+//ao usar o sql novamente, basta alterar o nome do arquivo
 
 app.post('/user', async (req, res) => {
   const { firstName, lastName, email, password } = req.body;

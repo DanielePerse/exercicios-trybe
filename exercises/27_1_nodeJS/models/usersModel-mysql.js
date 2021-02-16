@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('./connection-mysql');
 
 const isValid = (firstName, lastName, email, password) => {
   if (!firstName || typeof firstName !== 'string') return false;
