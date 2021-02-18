@@ -3,7 +3,7 @@ const apiService = require('../services/apiService');
 
 const isValid = (cep) => cep && cep.match(/^\d{5}-?\d{3}$/);
 
-const lookup = (cep) => {
+const lookup = async (cep) => {
   if(!isValid(cep)) return { err: { message: 'CEP inválido', code: 400 } };
   // o cep é valido? não - mensagem de erro / sim - segue linha 10
 

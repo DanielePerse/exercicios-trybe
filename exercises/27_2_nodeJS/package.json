@@ -8,6 +8,8 @@
     "express": "^4.17.1",
     "express-rescue": "^1.1.31",
     "mongodb": "^3.6.4",
+    "node-fetch": "^2.6.1",
+    "node-fetch-npm": "^2.0.4",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {},
