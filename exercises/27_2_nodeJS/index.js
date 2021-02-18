@@ -1,12 +1,9 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
+const cepController = require('./controllers/cepController');
 
-// const SongController = require('./controllers/SongController');
-
-// app.get('/songs', SongController.getAll);
+app.get('/lookup', cepController.lookupCEP);
 
 app.listen(PORT, () => console.log(`Porta sendo escutada em ${PORT}`));

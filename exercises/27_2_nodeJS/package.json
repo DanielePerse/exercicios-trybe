@@ -1,0 +1,21 @@
+{
+  "name": "27_2_nodeJS",
+  "version": "1.0.0",
+  "description": "Exercício 1 : Nesse exercício, você vai desenvolver uma aplicação MSC para consulta de CEPs, chamada cep-lookup . Você utilizará uma API para buscar os dados relacionados a um CEP e salvará esses dados no MongoDB. Um CEP válido é composto por 8 dígitos, com um hífen opcional separando os três últimos dígitos. Por exemplo, 30310-030 e 30310030 são CEPs válidos. 303100308 e AB897453 não são. Para consultar um CEP, você deve utilizar a API CEP lá. A página contém instruções sobre como utilizar a API. O service deve fornecer uma interface para consultar CEPs. Primeiramente, o service deve chamar o modelo para consultar o banco de dados pelo CEP procurado. Se o CEP for encontrado, seus dados são retornados sem consultar a API. Caso contrário, o service deve fazer uma requisição a API. O service então deverá enviar os dados para o modelo, para que ele possa salvar no MongoDB os dados da primeira API que responder com sucesso. Em outras palavras, o banco de dados funcionará como um cache de CEPs, enquanto a API só será consultada se um CEP não for encontrado localmente. Inicialmente, o banco deve estar vazio. O banco de dados só precisa armazenar as seguintes informações: CEP , UF , cidade , bairro e logradouro . Um CEP salvo no banco deve conter somente números, sem hífens, e essa chave deve ser única para evitar que o mesmo CEP seja cadastrado duas vezes e otimizar a busca. O CEP deve ser passado através da rota do endpoint da aplicação como uma query , da seguinte forma:",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.31",
+    "mongodb": "^3.6.4",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
