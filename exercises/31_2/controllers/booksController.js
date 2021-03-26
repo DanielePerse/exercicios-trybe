@@ -10,24 +10,37 @@ router.get('/books', async (req, res) => {
   res.status(200).json(books);
 });
 
-// router.get('/book/:id', async (req, res) => {
+router.get('/book/:id', async (req, res) => {
+  const { id } = req.params;
 
-//   res.status(200).json([]);
-// });
+  const book = await Book.findByPk(id);
 
-// router.post('/book', async (req, res) => {
+  res.status(200).json(book);
+});
 
-//   res.status(200).json([]);
-// });
+router.post('/book', async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
 
-// router.post('/book/:id', async (req, res) => {
+  const book = await Book.create({ title, author, pageQuantity });
 
-//   res.status(200).json([]);
-// });
+  res.status(200).json(book);
+});
 
-// router.delete('/book/:id', async (req, res) => {
+router.put('/book/:id', async (req, res) => {
+  const { id } = req.params;
+  const { title, author, pageQuantity } = req.body;
 
-//   res.status(200).json([]);
-// });
+  const book = await Book.update({ title, author, pageQuantity }, {where: { id }});
+
+  res.status(200).json(book);
+});
+
+router.delete('/book/:id', async (req, res) => {
+  const { id } = req.params;
+
+  await Book.destroy({ where: { id } });
+
+  res.status(204).json({ message: "livro deletado "});
+});
 
 module.exports = router;
