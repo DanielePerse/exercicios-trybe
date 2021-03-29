@@ -11,8 +11,11 @@ app.get('/employees', (_req, res) => Employees
 app.get('/employees/:id', (req, res) => Employees
 .findAll({
   where: { employee_id: req.params.id },
-  include: [{ model: Addresses, as: 'addresses' }],
+  include: [{ 
+    model: Addresses, as: 'addresses', attributes: { exclude: ['number'] },
+  }],
 })
+
 .then((employee) => {
   if (!employee.length) {
     return res.status(404).send({ message: 'Funcionário não encontrado' });
