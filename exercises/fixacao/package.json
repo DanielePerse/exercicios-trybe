@@ -1,0 +1,19 @@
+{
+  "name": "fixacao",
+  "version": "1.0.0",
+  "description": "- Ok, vimos um monte de teoria sobre o que é o MVC, mas como funciona isso na prática? Vamos construir uma pequena aplicação em Node.js e Express, seguindo o padrão MVC. - Vamos fazer isso \"na mão\", ou seja, não usaremos nenhum framework além do express. O motivo de fazermos isso é que muitos frameworks \"têm opinião\": eles já fornecem uma estrutura básica, já resolvem para você muitos problemas e o lugar onde as coisas devem ficar já está mais ou menos definido. Construir uma aplicação MVC do zero será trabalhoso, como você verá, mas vai te permitir ter uma melhor apreciação dos conceitos da arquitetura MVC aplicados na prática. - Lembra da API que desenvolvemos quando estávamos aprendendo sobre a arquitetura MSC ? Caso não lembre, nela construímos um CRUD simples, onde era possível cadastrar escritores, mas só com o \"C\" e o \"R\". Em outras palavras, poderemos criar e visualizar escritores. Nesse projeto, usaremos o MySQL como banco de dados. Não se preocupe em não ter a aplicação já desenvolvida em sua máquina, vamos passar por todas as etapas de desenvolvimento no conteúdo, da criação do banco até a renderização da view . Sem mais delongas, mãos à obra!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7"
+  }
+}
