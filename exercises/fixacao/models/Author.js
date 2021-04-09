@@ -15,7 +15,7 @@ return {
   middleName,
   lastName,
   name: fullName,
- };
+};
 };
 
 // Serializa o nome dos campos de snake_case para camelCase
