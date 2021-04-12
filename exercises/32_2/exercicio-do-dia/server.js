@@ -13,6 +13,12 @@ const server = net.createServer((connection) => {
   // connection.pipe(connection);
 });
 
+// exercicio 2: Através do método server.getConnections((err, count) => {}) imprima quantas conexões estão de pé. Basta adicionar um console.log e ver o que acontece na conexão.
+
+server.getConnections ((err, count) => {
+  console.log(count);
+})
+
 server.listen(8080, () => {
   console.log('Servidor escutando na porta 8080');
 });
