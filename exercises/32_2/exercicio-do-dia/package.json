@@ -1,0 +1,12 @@
+{
+  "name": "exercicio-do-dia",
+  "version": "1.0.0",
+  "description": "Utilize o pacote NET para ver, na prática, como é trafegar dados via sockets pelo Node.js !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
