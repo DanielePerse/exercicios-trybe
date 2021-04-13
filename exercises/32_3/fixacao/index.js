@@ -1,7 +1,8 @@
 const app = require('express')();
 const http = require('http').createServer(app);
-const cors = require('cors');
+const cors = require('cors'); // importando o pacote cors ( CORS ) para compartilhar recursos com origens diferentes
 
+// dessa função temos como retorno um servidor socket
 const io = require('socket.io')(http, {
   cors: {
     origin: 'http://localhost:3000', // url aceita pelo cors
@@ -19,6 +20,11 @@ io.on('connection', (socket) => {
   console.log(
     'Usuário conectado, igual ao que fizemos na aula anterior, porém dessa vez em um servidor escalável'
   );
+  socket.on('disconnect', () => {
+    console.log(
+      'Lembre-se de deixar tudo relacionado a "conexão socket" dentro do evento "connection"'
+    );
+  });
 });
 
 http.listen(3000, () => {
