@@ -16,14 +16,19 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', (socket) => {
-  console.log(
-    'Usuário conectado, igual ao que fizemos na aula anterior, porém dessa vez em um servidor escalável'
-  );
+io.on("connection", (socket) => {
+  console.log('Conectado');
+
+  socket.emit('ola', 'Que bom que você chegou aqui! Fica mais um cadin, vai ter bolo :)' );
+
+  socket.broadcast.emit('mensagemServer', { mensagem: ' Iiiiiirraaaa! Fulano acabou de se conectar :D'});
+
   socket.on('disconnect', () => {
-    console.log(
-      'Lembre-se de deixar tudo relacionado a "conexão socket" dentro do evento "connection"'
-    );
+    console.log('Desconectado');
+  });
+
+  socket.on('mensagem', (msg) => {
+    io.emit('mensagemServer', { mensagem: msg });
   });
 });
 
