@@ -24,3 +24,5 @@ print(title, price, description, urlImage, availableBooks, sep=" - ")
 # título, preço, descrição e url contendo a imagem de capa do livro
 # instalei python3 -m pip install parsel e importei
 # estou usando seletor para acessar os itens da página
+
+#content_inner > article > div.row > div.col-sm-6.product_main > p.instock.availability
