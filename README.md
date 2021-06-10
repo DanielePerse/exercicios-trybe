@@ -1,1 +1,0 @@
-Repositório com todos os exercícios que fiz so longo da minha trajetória na Trybe. Cada bloco possui uma branch correspondente.
